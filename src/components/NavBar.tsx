@@ -10,6 +10,16 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
+const LINKEDIN_URL = "https://www.linkedin.com/in/michael-moss-26a86a8/";
+
+function LinkedInIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+      <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.67H5.67V18.3h2.67V9.67zM7 5.9a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18.3v-4.73c0-2.53-1.35-3.71-3.15-3.71a2.72 2.72 0 0 0-2.46 1.35h-.04V9.67H10.1v8.63h2.67v-4.27c0-1.12.21-2.2 1.6-2.2s1.4 1.28 1.4 2.27v4.2h2.57z" />
+    </svg>
+  );
+}
+
 export default function NavBar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -33,7 +43,7 @@ export default function NavBar() {
           <span className="h-0.5 w-6 bg-white" />
         </button>
 
-        <ul className="hidden gap-8 sm:flex">
+        <ul className="hidden items-center gap-8 sm:flex">
           {links.map((link) => {
             const active = pathname === link.href;
             return (
@@ -49,6 +59,19 @@ export default function NavBar() {
               </li>
             );
           })}
+          <li>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Connect on LinkedIn"
+              title="Connect on LinkedIn"
+              className="inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              Connect
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -70,6 +93,18 @@ export default function NavBar() {
               </li>
             );
           })}
+          <li>
+            <a
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="mt-2 inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              Connect on LinkedIn
+            </a>
+          </li>
         </ul>
       )}
     </header>

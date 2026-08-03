@@ -3,8 +3,8 @@
 import { useEffect, useState } from "react";
 
 // Renders the monogram placeholder (/portrait.svg) by default, then upgrades to
-// the real photo (/portrait.jpg) if that file exists and loads. Drop a
-// portrait.jpg into /public to replace the placeholder everywhere — no code
+// the real photo (/portrait.png) if that file exists and loads. Drop a
+// portrait.png into /public to replace the placeholder everywhere — no code
 // change needed. Preloading avoids both the hydration race (an <img> that 404s
 // before React hydrates never fires onError) and a broken-image flash.
 export default function Portrait({ className }: { className?: string }) {
@@ -12,8 +12,8 @@ export default function Portrait({ className }: { className?: string }) {
 
   useEffect(() => {
     const img = new window.Image();
-    img.onload = () => setSrc("/portrait.jpg");
-    img.src = "/portrait.jpg";
+    img.onload = () => setSrc("/portrait.png");
+    img.src = "/portrait.png";
   }, []);
 
   return (

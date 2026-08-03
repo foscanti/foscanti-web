@@ -5,7 +5,7 @@ import { skills } from "@/lib/experience";
 const stats = [
   { value: "18", label: "Years in IT & technology delivery" },
   { value: "14", label: "Years in leadership roles" },
-  { value: "$10M+", label: "Program value delivered" },
+  { value: "$10M+", label: "Largest program delivered" },
   { value: "PRINCE2", label: "Practitioner, Agile & PMI" },
 ];
 

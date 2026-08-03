@@ -22,75 +22,84 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white">
-        <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 py-14 sm:py-16 lg:grid-cols-[1.4fr_1fr]">
-          <div className="flex flex-col gap-5">
-            <p className="text-sm font-semibold uppercase tracking-widest text-teal">
-              RVP, North America Services — Dotmatics, a Siemens Company
-            </p>
-            <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
-              Michael George Moss
-            </h1>
-            <p className="max-w-xl text-lg leading-relaxed text-white/85">
-              A determined, detail-driven technology leader with 18 years&rsquo;
-              experience — 14 in leadership — driving customer-centric delivery
-              through robust process and governance, with data and customers at the
-              centre of every decision.
-            </p>
-            <div className="flex flex-wrap gap-4 pt-1">
-              <a
-                href="#about"
-                className="inline-flex items-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
-              >
-                Learn more
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
+        <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16">
+          <div className="relative">
+            {/* Portrait in top right corner */}
+            <div className="absolute -top-8 right-0 sm:right-6">
+              <Portrait className="h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48" />
+            </div>
+
+            {/* Main content */}
+            <div className="flex flex-col items-center text-center">
+              <p className="text-sm font-semibold uppercase tracking-widest text-teal">
+                RVP, North America Services — Dotmatics, a Siemens Company
+              </p>
+              <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
+                Michael George Moss
+              </h1>
+              <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/85">
+                A determined, detail-driven technology leader with 18 years&rsquo;
+                experience — 14 in leadership — driving customer-centric delivery
+                through robust process and governance, with data and customers at the
+                centre of every decision.
+              </p>
+
+              {/* Centered buttons */}
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+                <a
+                  href="#about"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
                 >
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </a>
-              <Link
-                href="/contact"
-                className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-teal hover:text-teal"
-              >
-                Get in Touch
-              </Link>
+                  Learn more
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </a>
+                <Link
+                  href="/contact"
+                  className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-teal hover:text-teal"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+
+              {/* Scroll arrow */}
+              <div className="mt-12 flex justify-center">
+                <a
+                  href="#about"
+                  aria-label="Scroll to learn more"
+                  className="scroll-cue text-white/60 transition-colors hover:text-teal"
+                >
+                  <svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="justify-self-center lg:justify-self-end">
-            <Portrait className="h-56 w-56 sm:h-64 sm:w-64 lg:h-72 lg:w-72" />
-          </div>
-        </div>
-
-        {/* Scroll cue */}
-        <div className="flex justify-center pb-6">
-          <a
-            href="#about"
-            aria-label="Scroll to learn more"
-            className="scroll-cue text-white/60 transition-colors hover:text-teal"
-          >
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M6 9l6 6 6-6" />
-            </svg>
-          </a>
+          {/* Bottom padding for scroll space */}
+          <div className="h-6" />
         </div>
       </section>
 

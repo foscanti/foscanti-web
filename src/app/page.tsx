@@ -32,8 +32,9 @@ export default function Home() {
             </h1>
             <p className="max-w-xl text-lg leading-relaxed text-white/85">
               A determined, detail-driven technology leader with 18 years&rsquo;
-              experience — 14 in leadership — delivering complex, multi-team
-              programs to enterprise and product organizations.
+              experience — 14 in leadership — driving customer-centric delivery
+              through robust process and governance, with data and customers at the
+              centre of every decision.
             </p>
             <div className="flex flex-wrap gap-4 pt-1">
               <a
@@ -115,19 +116,21 @@ export default function Home() {
         </h2>
         <div className="mt-4 grid gap-6 lg:grid-cols-2">
           <p className="leading-relaxed text-navy/80">
-            I pride myself on attentive action and passion — for the products I
-            engage with and the people around the organizations I work with. My
-            operational, tactical, and strategic skills are strong, and I step up to
-            lead problems, dependencies, and conflicts through diligent, proactive
-            management, building a transparent team ethos that drives tasks through
-            to resolution.
+            I&rsquo;m a passionate Agile evangelist and a proven enabler within
+            delivery teams. I pride myself on attentive action and passion — for the
+            products I engage with and the people around the organizations I work
+            with. My operational, tactical, and strategic skills are strong, and I
+            step up to lead problems, dependencies, and conflicts through diligent,
+            proactive management, building a transparent team ethos that drives work
+            through to resolution.
           </p>
           <p className="leading-relaxed text-navy/80">
-            I&rsquo;m passionate about process refinement and operational
-            excellence — driving new technology, product development, and design in
-            web and app products that create real value. I&rsquo;ve led complex,
-            multi-team programs for enterprise and product clients, communicating
-            extensively with C-suite and senior leaders.
+            Beyond coaching and developing people, my focus is using technology to
+            build long-lasting, scalable solutions that deliver real performance
+            against cost. That passion for IT isn&rsquo;t limited to my professional
+            sphere — I love helping others realise their own aspirations, whether
+            that&rsquo;s a personal website or the best way to automate a process in
+            their working life.
           </p>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -178,12 +181,22 @@ export default function Home() {
           Whether it&rsquo;s a project, a partnership, or just to connect — I&rsquo;d
           love to hear from you.
         </p>
-        <Link
-          href="/contact"
-          className="mt-6 inline-block rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
-        >
-          Get in Touch
-        </Link>
+        <div className="mt-6 flex flex-wrap justify-center gap-4">
+          <Link
+            href="/contact"
+            className="inline-block rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-navy hover:text-white"
+          >
+            Get in Touch
+          </Link>
+          <a
+            href="https://www.linkedin.com/in/michael-moss-26a86a8/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full border border-navy/30 px-6 py-3 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
+          >
+            Connect on LinkedIn
+          </a>
+        </div>
       </section>
     </>
   );

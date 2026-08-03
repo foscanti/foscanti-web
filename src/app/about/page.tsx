@@ -52,6 +52,14 @@ export default function About() {
             development — creating, improving, and implementing changes that add value
             to products, processes, and technologies.
           </p>
+          <p>
+            At heart I&rsquo;m an Agile evangelist and an enabler within delivery
+            teams: my main interest is using technology to build long-lasting,
+            scalable solutions that deliver performance against cost. That passion
+            isn&rsquo;t limited to my professional sphere — I actively help others
+            realise their own aspirations, whether that&rsquo;s a personal website or
+            the best way to automate a process in their working life.
+          </p>
         </div>
       </section>
 

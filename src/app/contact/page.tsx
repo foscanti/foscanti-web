@@ -7,8 +7,16 @@ export const metadata: Metadata = {
 
 const details = [
   { label: "Email", value: "michael@foscanti.com", href: "mailto:michael@foscanti.com" },
+  {
+    label: "LinkedIn",
+    value: "in/michael-moss-26a86a8",
+    href: "https://www.linkedin.com/in/michael-moss-26a86a8/",
+  },
   { label: "Location", value: "Boston, MA, USA" },
-  { label: "Languages", value: "English (Native), German (Business Basic)" },
+  {
+    label: "Languages",
+    value: "English (Native), German (Professional working proficiency)",
+  },
 ];
 
 export default function Contact() {
@@ -37,7 +45,13 @@ export default function Contact() {
                   </dt>
                   <dd className="mt-1 text-lg text-navy">
                     {item.href ? (
-                      <a href={item.href} className="hover:text-teal">
+                      <a
+                        href={item.href}
+                        className="hover:text-teal"
+                        {...(item.href.startsWith("http")
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : {})}
+                      >
                         {item.value}
                       </a>
                     ) : (

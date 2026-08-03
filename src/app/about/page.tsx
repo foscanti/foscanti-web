@@ -151,6 +151,24 @@ export default function About() {
           </p>
         </div>
       </section>
+
+      <section className="mx-auto max-w-5xl px-6 pb-16">
+        <div className="rounded-2xl bg-navy px-8 py-10 text-white sm:px-12">
+          <h2 className="text-2xl font-bold sm:text-3xl">Why &ldquo;Foscanti&rdquo;?</h2>
+          <div className="mt-4 space-y-4 leading-relaxed text-white/85">
+            <p>
+              A name, a vision — a teenager thinking. It was born from a love of
+              football and design.
+            </p>
+            <p>
+              The &ldquo;F&rdquo; is a nod to the &ldquo;P&rdquo; of the Pirelli
+              logo on Inter Milan&rsquo;s shirts of the late &rsquo;90s. The rest is
+              lifted from Italy — something with a lift to it that rhymes with Moss.
+              It&rsquo;s been my personal brand ever since.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

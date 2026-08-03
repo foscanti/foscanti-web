@@ -23,9 +23,18 @@
   --font-mono: var(--font-geist-mono);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+/* Offset anchor targets so the sticky navbar doesn't cover section headings. */
+[id] {
+  scroll-margin-top: 5rem;
 }
 
 .section-divider {
@@ -33,4 +42,27 @@ body {
   width: 64px;
   background: var(--color-teal);
   border-radius: 9999px;
+}
+
+@keyframes scroll-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+.scroll-cue {
+  animation: scroll-bounce 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .scroll-cue {
+    animation: none;
+  }
 }

@@ -22,6 +22,12 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Non-secret deploy targets are hardcoded here so they can't be misconfigured
+    # in repo settings. Only AWS_ROLE_ARN remains a secret.
+    env:
+      AWS_REGION: eu-central-1
+      S3_BUCKET: foscanti.com
+      CLOUDFRONT_DISTRIBUTION_ID: E127NN2P6GI3GI
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -42,23 +48,23 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
+          aws-region: ${{ env.AWS_REGION }}
 
       - name: Sync to S3
         run: |
           # Long-cache the fingerprinted assets under /_next, short-cache the
           # HTML so new deploys are picked up promptly.
-          aws s3 sync ./out "s3://${{ vars.S3_BUCKET }}" \
+          aws s3 sync ./out "s3://$S3_BUCKET" \
             --delete \
             --exclude "_next/*" \
             --cache-control "public, max-age=0, must-revalidate"
 
-          aws s3 sync ./out/_next "s3://${{ vars.S3_BUCKET }}/_next" \
+          aws s3 sync ./out/_next "s3://$S3_BUCKET/_next" \
             --delete \
             --cache-control "public, max-age=31536000, immutable"
 
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
-            --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" \
+            --distribution-id "$CLOUDFRONT_DISTRIBUTION_ID" \
             --paths "/*"

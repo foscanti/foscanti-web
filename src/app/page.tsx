@@ -66,9 +66,7 @@ export default function Home() {
           </div>
 
           <div className="justify-self-center lg:justify-self-end">
-            <div className="overflow-hidden rounded-2xl ring-4 ring-teal/60 shadow-xl">
-              <Portrait className="h-56 w-56 object-cover sm:h-64 sm:w-64 lg:h-72 lg:w-72" />
-            </div>
+            <Portrait className="h-56 w-56 sm:h-64 sm:w-64 lg:h-72 lg:w-72" />
           </div>
         </div>
 

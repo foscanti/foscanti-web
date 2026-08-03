@@ -23,21 +23,16 @@ export default function Home() {
       {/* Hero */}
       <section className="bg-navy text-white">
         <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16">
-          <div className="relative">
-            {/* Portrait in top right corner */}
-            <div className="absolute -top-8 right-0 sm:right-6">
-              <Portrait className="h-32 w-32 sm:h-40 sm:w-40 lg:h-48 lg:w-48" />
-            </div>
-
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             {/* Main content */}
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <p className="text-sm font-semibold uppercase tracking-widest text-teal">
                 RVP, North America Services — Dotmatics, a Siemens Company
               </p>
               <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
                 Michael George Moss
               </h1>
-              <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/85">
+              <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/85 lg:mx-0">
                 A determined, detail-driven technology leader with 18 years&rsquo;
                 experience — 14 in leadership — driving customer-centric delivery
                 through robust process and governance, with data and customers at the
@@ -45,7 +40,7 @@ export default function Home() {
               </p>
 
               {/* Centered buttons */}
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center">
+              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
                 <a
                   href="#about"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
@@ -72,30 +67,35 @@ export default function Home() {
                   Get in Touch
                 </Link>
               </div>
-
-              {/* Scroll arrow */}
-              <div className="mt-12 flex justify-center">
-                <a
-                  href="#about"
-                  aria-label="Scroll to learn more"
-                  className="scroll-cue text-white/60 transition-colors hover:text-teal"
-                >
-                  <svg
-                    width="28"
-                    height="28"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </a>
-              </div>
             </div>
+
+            {/* Portrait */}
+            <div className="hidden lg:block">
+              <Portrait className="h-48 w-48" />
+            </div>
+          </div>
+
+          {/* Scroll arrow */}
+          <div className="mt-12 flex justify-center lg:mt-16">
+            <a
+              href="#about"
+              aria-label="Scroll to learn more"
+              className="scroll-cue text-white/60 transition-colors hover:text-teal"
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
           </div>
 
           {/* Bottom padding for scroll space */}

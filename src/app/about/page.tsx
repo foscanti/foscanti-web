@@ -12,9 +12,7 @@ export default function About() {
     <>
       <section className="bg-navy text-white">
         <div className="mx-auto flex max-w-5xl flex-col items-center gap-8 px-6 py-14 sm:py-16 sm:flex-row sm:items-center">
-          <div className="shrink-0 overflow-hidden rounded-2xl ring-4 ring-teal/60 shadow-xl">
-            <Portrait className="h-40 w-40 object-cover sm:h-48 sm:w-48" />
-          </div>
+          <Portrait className="h-40 w-40 shrink-0 sm:h-48 sm:w-48" />
           <div>
             <h1 className="text-3xl font-bold sm:text-4xl">About Me</h1>
             <p className="mt-2 text-white/80">

@@ -7,7 +7,7 @@ import { useState } from "react";
 const links = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/contact", label: "Contact" },
+  { href: "/contact", label: "Get in Touch" },
 ];
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/michael-moss-26a86a8/";

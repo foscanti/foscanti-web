@@ -4,7 +4,7 @@ import { education, experience, skills } from "@/lib/experience";
 
 export const metadata: Metadata = {
   title: "About | Michael Moss",
-  description: "Profile, skills, experience, and education for Michael George Moss.",
+  description: "Profile, skills, experience, and education for Michael Moss.",
 };
 
 export default function About() {

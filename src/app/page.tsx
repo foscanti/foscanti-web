@@ -26,11 +26,8 @@ export default function Home() {
           <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             {/* Main content */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
-              <p className="text-sm font-semibold uppercase tracking-widest text-teal">
-                RVP, North America Services — Dotmatics, a Siemens Company
-              </p>
-              <h1 className="mt-4 text-4xl font-bold leading-tight sm:text-5xl">
-                Michael George Moss
+              <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
+                Michael Moss
               </h1>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/85 lg:mx-0">
                 A determined, detail-driven technology leader with 18 years&rsquo;

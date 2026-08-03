@@ -6,10 +6,12 @@ export const metadata: Metadata = {
 };
 
 const details = [
+  { label: "Cell (US)", value: "339-242-7199", href: "tel:+13392427199" },
+  { label: "Cell (UK)", value: "07835 961 284", href: "tel:+447835961284" },
   { label: "Email", value: "michael@foscanti.com", href: "mailto:michael@foscanti.com" },
   {
     label: "LinkedIn",
-    value: "in/michael-moss-26a86a8",
+    value: "Connect on LinkedIn",
     href: "https://www.linkedin.com/in/michael-moss-26a86a8/",
   },
   { label: "Location", value: "Boston, MA, USA" },
@@ -62,20 +64,28 @@ export default function Contact() {
               ))}
             </dl>
 
-            <a
-              href="mailto:michael@foscanti.com"
-              className="mt-8 inline-block rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
-            >
-              Send an Email
-            </a>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="tel:+13392427199"
+                className="inline-block rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+              >
+                Call my cell
+              </a>
+              <a
+                href="mailto:michael@foscanti.com"
+                className="inline-block rounded-full border border-navy/30 px-6 py-3 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
+              >
+                Send an email
+              </a>
+            </div>
           </div>
 
           <div className="rounded-2xl bg-rose/20 p-8">
             <h2 className="text-lg font-bold text-navy">A note on reaching out</h2>
             <p className="mt-4 text-sm leading-relaxed text-navy/80">
-              Email is the fastest way to reach me. I try to respond to every message
-              — please include a little detail about what you&rsquo;d like to discuss
-              so I can get back to you with something useful.
+              Email is slow — from a bygone era, lost in marketing malaise and the
+              ramifications of reminders. Message or call my cell; leave a voicemail
+              and I&rsquo;ll get back to you quickly.
             </p>
             <p className="mt-4 text-sm leading-relaxed text-navy/80">
               Based in the Boston area and always happy to connect with fellow

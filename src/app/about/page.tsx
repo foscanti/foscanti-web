@@ -84,12 +84,14 @@ export default function About() {
         <ol className="mt-8 space-y-10 border-l-2 border-rose/50 pl-8">
           {experience.map((role) => (
             <li key={`${role.company}-${role.title}-${role.period}`} className="relative">
-              <span className="absolute -left-[2.55rem] top-1 h-3 w-3 rounded-full bg-teal" />
-              <p className="text-xs font-semibold uppercase tracking-wide text-teal">
-                {role.period}
-              </p>
-              <h3 className="mt-1 text-lg font-bold text-navy">{role.title}</h3>
-              <p className="text-sm font-medium text-navy/70">
+              <span className="absolute -left-[2.55rem] top-0 h-3 w-3 rounded-full bg-teal" />
+              <div className="flex items-baseline justify-between gap-4">
+                <h3 className="text-lg font-bold text-navy">{role.title}</h3>
+                <p className="shrink-0 text-xs font-semibold uppercase tracking-wide text-teal">
+                  {role.period}
+                </p>
+              </div>
+              <p className="mt-2 text-sm font-medium text-navy/70">
                 {role.company} — {role.location}
               </p>
               <ul className="mt-3 list-disc space-y-1.5 pl-5 text-sm leading-relaxed text-navy/80">

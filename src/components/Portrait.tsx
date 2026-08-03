@@ -12,7 +12,7 @@ const RING = {
 type Variant = keyof typeof RING;
 
 // Renders a circular portrait: the monogram placeholder (/portrait.svg) by
-// default, upgraded to the real photo (/portrait.png) once it loads. Preloading
+// default, upgraded to the real photo (/portrait.jpg) once it loads. Preloading
 // avoids the hydration race (an <img> that 404s before React hydrates never
 // fires onError) and a broken-image flash. Sizing comes from `className`.
 export default function Portrait({ className = "" }: { className?: string }) {
@@ -33,8 +33,8 @@ export default function Portrait({ className = "" }: { className?: string }) {
 
     // Swap the placeholder for the real photo once it has loaded.
     const img = new window.Image();
-    img.onload = () => setSrc("/portrait.png");
-    img.src = "/portrait.png";
+    img.onload = () => setSrc("/portrait.jpg");
+    img.src = "/portrait.jpg";
   }, []);
 
   return (

@@ -22,22 +22,22 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="bg-navy text-white">
-        <div className="mx-auto max-w-5xl px-6 py-14 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
+        <div className="mx-auto max-w-5xl px-6 py-8 sm:py-14 lg:py-16">
+          <div className="grid gap-6 lg:gap-8 lg:grid-cols-[1fr_auto] lg:items-start">
             {/* Main content */}
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
                 Michael Moss
               </h1>
-              <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-white/85 lg:mx-0">
+              <p className="mx-auto mt-2 sm:mt-4 max-w-2xl text-lg leading-relaxed text-white/85 lg:mx-0">
                 A determined, detail-driven technology leader with 18 years&rsquo;
                 experience — 14 in leadership — driving customer-centric delivery
                 through robust process and governance, with data and customers at the
                 centre of every decision.
               </p>
 
-              {/* Centered buttons */}
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center lg:justify-start">
+              {/* Buttons */}
+              <div className="mt-6 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 sm:items-center sm:justify-center lg:justify-start">
                 <a
                   href="#about"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
@@ -57,6 +57,18 @@ export default function Home() {
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </a>
+                <a
+                  href="https://www.linkedin.com/in/michael-moss-26a86a8/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-teal hover:text-navy"
+                  title="Connect on LinkedIn"
+                >
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-4 w-4">
+                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.67H5.67V18.3h2.67V9.67zM7 5.9a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18.3v-4.73c0-2.53-1.35-3.71-3.15-3.71a2.72 2.72 0 0 0-2.46 1.35h-.04V9.67H10.1v8.63h2.67v-4.27c0-1.12.21-2.2 1.6-2.2s1.4 1.28 1.4 2.27v4.2h2.57z" />
+                  </svg>
+                  Connect
+                </a>
                 <Link
                   href="/contact"
                   className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-teal hover:text-teal"
@@ -73,7 +85,7 @@ export default function Home() {
           </div>
 
           {/* Scroll arrow */}
-          <div className="mt-12 flex justify-center lg:mt-16">
+          <div className="mt-8 sm:mt-12 flex justify-center lg:mt-16">
             <a
               href="#about"
               aria-label="Scroll to learn more"

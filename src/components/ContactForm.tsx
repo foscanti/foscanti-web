@@ -23,7 +23,9 @@ export default function ContactForm() {
     setErrorMessage("");
 
     try {
-      const response = await fetch("/api/contact", {
+      // Use AWS Lambda endpoint for contact form submission
+      const endpoint = process.env.NEXT_PUBLIC_LAMBDA_ENDPOINT || "/api/contact";
+      const response = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

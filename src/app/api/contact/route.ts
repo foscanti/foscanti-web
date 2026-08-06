@@ -55,11 +55,33 @@ async function sendEmail(
   // Option 2: Using Nodemailer with Gmail SMTP
   // Install: npm install nodemailer
   // Set up: https://support.google.com/accounts/answer/185833 (App Password)
+  // const transporter = nodemailer.createTransport({
+  //   service: "gmail",
+  //   auth: {
+  //     user: process.env.GMAIL_USER,
+  //     pass: process.env.GMAIL_PASS,
+  //   },
+  // });
+
+  // Option 2b: Using Zoho Mail SMTP
+  // Sign up: https://mail.zoho.com
+  // Region: Use appropriate host based on your Zoho region
+  //   - US: smtp.zoho.com
+  //   - EU: smtp.zoho.eu
+  //   - IN: smtp.zoho.in
+  //   - AU: smtp.zoho.com.au
+  //   - JP: smtp.zoho.jp
+  // Set environment variables:
+  //   ZOHO_USER=your-email@yourdomain.com
+  //   ZOHO_PASS=your-zoho-password-or-app-password
+  //   ZOHO_HOST=smtp.zoho.com (or your region)
   const transporter = nodemailer.createTransport({
-    service: "gmail",
+    host: process.env.ZOHO_HOST || "smtp.zoho.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS,
+      user: process.env.ZOHO_USER,
+      pass: process.env.ZOHO_PASS,
     },
   });
 

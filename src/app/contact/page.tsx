@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | Michael Moss",
@@ -35,7 +36,13 @@ export default function Contact() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <div className="grid gap-10 sm:grid-cols-2">
+        <div className="grid gap-10 lg:grid-cols-3">
+          <div className="lg:col-span-2">
+            <div className="section-divider mb-6" />
+            <h2 className="text-2xl font-bold text-navy">Send a Message</h2>
+            <ContactForm />
+          </div>
+
           <div>
             <div className="section-divider mb-6" />
             <h2 className="text-2xl font-bold text-navy">Contact Details</h2>

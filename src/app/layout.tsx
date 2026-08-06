@@ -17,7 +17,43 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Michael Moss | Technology & Operations Executive",
   description:
-    "Michael George Moss — Technology and operations executive with 18 years' experience leading complex, multi-team programs for enterprise and product organizations.",
+    "Technology and operations executive with 18 years' experience leading complex, multi-team programs for enterprise and product organizations.",
+  openGraph: {
+    title: "Michael Moss | Technology & Operations Executive",
+    description:
+      "Technology and operations executive with 18 years' experience leading complex, multi-team programs for enterprise and product organizations.",
+    url: "https://foscanti.com",
+    siteName: "Michael Moss",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Michael Moss | Technology & Operations Executive",
+    description:
+      "Technology and operations executive with 18 years' experience leading complex, multi-team programs for enterprise and product organizations.",
+  },
+  robots: "index, follow",
+  authors: [{ name: "Michael Moss" }],
+  other: {
+    "application/ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Michael Moss",
+      url: "https://foscanti.com",
+      email: "michael@foscanti.com",
+      jobTitle: "RVP, North America Services",
+      worksFor: {
+        "@type": "Organization",
+        name: "Dotmatics, a Siemens Company",
+      },
+      sameAs: ["https://www.linkedin.com/in/michael-moss-26a86a8/"],
+      description:
+        "Technology and operations executive with 18 years' experience leading complex, multi-team programs for enterprise and product organizations.",
+      telephone: "+1-339-242-7199",
+      areaServed: "US",
+      knowsLanguage: ["en-US", "de"],
+    }),
+  },
 };
 
 export default function RootLayout({

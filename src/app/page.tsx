@@ -38,25 +38,12 @@ export default function Home() {
 
               {/* Buttons */}
               <div className="mt-6 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 sm:items-center sm:justify-center lg:justify-start">
-                <a
-                  href="#about"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
                 >
-                  Learn more
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    aria-hidden="true"
-                  >
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </a>
+                  Get in Touch
+                </Link>
                 <a
                   href="https://www.linkedin.com/in/michael-moss-26a86a8/"
                   target="_blank"
@@ -69,12 +56,6 @@ export default function Home() {
                   </svg>
                   Connect
                 </a>
-                <Link
-                  href="/contact"
-                  className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-teal hover:text-teal"
-                >
-                  Get in Touch
-                </Link>
               </div>
             </div>
 
@@ -84,20 +65,20 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Scroll arrow */}
+          {/* Learn more button with scroll cue */}
           <div className="mt-8 sm:mt-12 flex justify-center lg:mt-16">
             <a
               href="#about"
-              aria-label="Scroll to learn more"
-              className="scroll-cue text-white/60 transition-colors hover:text-teal"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream scroll-cue"
             >
+              Learn more
               <svg
-                width="28"
-                height="28"
+                width="16"
+                height="16"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                strokeWidth="2"
+                strokeWidth="2.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 aria-hidden="true"

@@ -42,6 +42,11 @@ jobs:
         run: npm ci
 
       - name: Build static site
+        env:
+          ZOHO_USER: ${{ secrets.ZOHO_USER }}
+          ZOHO_PASS: ${{ secrets.ZOHO_PASS }}
+          ZOHO_HOST: ${{ secrets.ZOHO_HOST }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
         run: npm run build
 
       - name: Configure AWS credentials

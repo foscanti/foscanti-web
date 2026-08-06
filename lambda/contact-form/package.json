@@ -1,0 +1,21 @@
+{
+  "name": "foscanti-contact-form-lambda",
+  "version": "1.0.0",
+  "description": "AWS Lambda function for foscanti.com contact form submission via Zoho Mail",
+  "main": "index.js",
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "scripts": {
+    "build": "mkdir -p build && cp index.js build/ && cp -r node_modules build/ && cd build && zip -r ../function.zip . && cd .. && rm -rf build",
+    "install-deps": "npm install"
+  },
+  "keywords": [
+    "lambda",
+    "contact-form",
+    "email",
+    "zoho"
+  ],
+  "author": "Michael Moss",
+  "license": "MIT"
+}

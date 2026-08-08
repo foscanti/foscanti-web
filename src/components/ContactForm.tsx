@@ -17,13 +17,34 @@ export default function ContactForm() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const validateForm = (): string => {
+    if (!formData.name?.trim()) return "Name is required.";
+    if (!formData.email?.trim()) return "Email is required.";
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) return "Please enter a valid email address.";
+
+    if (formData.question.trim().length < 169) {
+      const charsLeft = 169 - formData.question.trim().length;
+      return `Message not long enough. ${charsLeft} characters left.`;
+    }
+
+    return "";
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("loading");
     setErrorMessage("");
 
+    const validationError = validateForm();
+    if (validationError) {
+      setStatus("error");
+      setErrorMessage(validationError);
+      return;
+    }
+
     try {
-      // Use AWS Lambda endpoint for contact form submission
       const endpoint = process.env.NEXT_PUBLIC_LAMBDA_ENDPOINT || "/api/contact";
       const response = await fetch(endpoint, {
         method: "POST",
@@ -90,7 +111,7 @@ export default function ContactForm() {
 
       <div>
         <label htmlFor="telephone" className="block text-sm font-medium text-navy">
-          Telephone *
+          Telephone
         </label>
         <input
           type="tel"
@@ -98,25 +119,28 @@ export default function ContactForm() {
           name="telephone"
           value={formData.telephone}
           onChange={handleChange}
-          required
           className="mt-1 w-full rounded-lg border border-navy/20 px-4 py-2 text-navy placeholder-navy/40 transition-colors focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
           placeholder="+1 (555) 000-0000"
         />
       </div>
 
       <div>
-        <label htmlFor="question" className="block text-sm font-medium text-navy">
-          Question *
-        </label>
+        <div className="flex items-center justify-between">
+          <label htmlFor="question" className="block text-sm font-medium text-navy">
+            Message *
+          </label>
+          <span className="text-xs text-navy/60">
+            {formData.question.trim().length}/169
+          </span>
+        </div>
         <textarea
           id="question"
           name="question"
           value={formData.question}
           onChange={handleChange}
-          required
           rows={4}
           className="mt-1 w-full rounded-lg border border-navy/20 px-4 py-2 text-navy placeholder-navy/40 transition-colors focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/20"
-          placeholder="What would you like to discuss?"
+          placeholder="What would you like to discuss? (minimum 169 characters)"
         />
       </div>
 

@@ -21,11 +21,11 @@ exports.handler = async (event) => {
     const { name, email, telephone, question } = body;
 
     // Validate required fields
-    if (!name?.trim() || !email?.trim() || !telephone?.trim() || !question?.trim()) {
+    if (!name?.trim() || !email?.trim() || !question?.trim()) {
       return {
         statusCode: 400,
         headers,
-        body: JSON.stringify({ error: 'All fields are required.' }),
+        body: JSON.stringify({ error: 'Name, email, and message are required.' }),
       };
     }
 
@@ -36,6 +36,15 @@ exports.handler = async (event) => {
         statusCode: 400,
         headers,
         body: JSON.stringify({ error: 'Invalid email address.' }),
+      };
+    }
+
+    // Validate message length
+    if (question.trim().length < 169) {
+      return {
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Message must be at least 169 characters.' }),
       };
     }
 

@@ -18,7 +18,8 @@ const details = [
   { label: "Location", value: "Boston, MA, USA" },
   {
     label: "Languages",
-    value: "English (Native), German (Professional working proficiency)",
+    value: "languages",
+    isLanguages: true,
   },
 ];
 
@@ -62,7 +63,12 @@ export default function Contact() {
                     {item.label}
                   </dt>
                   <dd className="mt-1 text-lg text-navy">
-                    {item.href ? (
+                    {item.isLanguages ? (
+                      <ul className="space-y-1">
+                        <li>🇬🇧 English (Native)</li>
+                        <li>🇩🇪 German (Professional working proficiency)</li>
+                      </ul>
+                    ) : item.href ? (
                       <a
                         href={item.href}
                         className="hover:text-teal"

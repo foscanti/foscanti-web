@@ -5,21 +5,9 @@ const rateLimitMap = new Map();
 const RATE_LIMIT_MS = 60 * 1000; // 1 minute per IP
 
 exports.handler = async (event) => {
-  // Enable CORS
   const headers = {
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': 'https://foscanti.com',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
   };
-
-  // Handle CORS preflight
-  if (event.httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 200,
-      headers,
-    };
-  }
 
   try {
     // Parse request body

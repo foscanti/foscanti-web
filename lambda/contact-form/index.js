@@ -5,7 +5,6 @@ const rateLimitMap = new Map();
 const RATE_LIMIT_MS = 60 * 1000; // 1 minute per IP
 
 exports.handler = async (event) => {
-
   try {
     // Parse request body
     let body;

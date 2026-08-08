@@ -26,25 +26,34 @@ export default function Contact() {
   return (
     <>
       <section className="bg-navy text-white">
-        <div className="mx-auto max-w-5xl px-6 py-16 sm:py-20">
-          <h1 className="text-3xl font-bold sm:text-4xl">Get in Touch</h1>
-          <p className="mt-2 max-w-2xl text-white/80">
-            Whether it&rsquo;s a project, a partnership, or just to connect — I&rsquo;d
-            love to hear from you.
-          </p>
+        <div className="mx-auto max-w-5xl px-6 py-8">
+          <h1 className="text-2xl font-bold">Get in Touch</h1>
         </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16">
+        <div className="section-divider mb-6" />
+        <div className="mb-8 rounded-2xl bg-rose/20 p-6">
+          <p className="text-sm leading-relaxed text-navy/80">
+            Email is slow — from a bygone era, lost in marketing malaise and the
+            ramifications of reminders. Message or call my cell; leave a voicemail
+            and I&rsquo;ll get back to you quickly.
+          </p>
+          <p className="mt-4 text-sm leading-relaxed text-navy/80">
+            Based in the Boston area and always happy to connect with fellow
+            technology, product, and delivery leaders.
+          </p>
+        </div>
+
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
-            <div className="section-divider mb-6" />
             <h2 className="text-2xl font-bold text-navy">Send a Message</h2>
-            <ContactForm />
+            <div className="mt-6">
+              <ContactForm />
+            </div>
           </div>
 
           <div>
-            <div className="section-divider mb-6" />
             <h2 className="text-2xl font-bold text-navy">Contact Details</h2>
             <dl className="mt-6 space-y-5">
               {details.map((item) => (
@@ -85,19 +94,6 @@ export default function Contact() {
                 Send an email
               </a>
             </div>
-          </div>
-
-          <div className="rounded-2xl bg-rose/20 p-8">
-            <h2 className="text-lg font-bold text-navy">A note on reaching out</h2>
-            <p className="mt-4 text-sm leading-relaxed text-navy/80">
-              Email is slow — from a bygone era, lost in marketing malaise and the
-              ramifications of reminders. Message or call my cell; leave a voicemail
-              and I&rsquo;ll get back to you quickly.
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-navy/80">
-              Based in the Boston area and always happy to connect with fellow
-              technology, product, and delivery leaders.
-            </p>
           </div>
         </div>
       </section>

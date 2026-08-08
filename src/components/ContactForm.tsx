@@ -131,14 +131,9 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <div className="flex items-center justify-between">
-          <label htmlFor="question" className="block text-sm font-medium text-navy">
-            Message *
-          </label>
-          <span className="text-xs text-navy/60">
-            {formData.question.trim().length}/169
-          </span>
-        </div>
+        <label htmlFor="question" className="block text-sm font-medium text-navy">
+          Message *
+        </label>
         <textarea
           id="question"
           name="question"

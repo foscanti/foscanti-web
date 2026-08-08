@@ -5,9 +5,6 @@ const rateLimitMap = new Map();
 const RATE_LIMIT_MS = 60 * 1000; // 1 minute per IP
 
 exports.handler = async (event) => {
-  const headers = {
-    'Content-Type': 'application/json',
-  };
 
   try {
     // Parse request body
@@ -24,7 +21,6 @@ exports.handler = async (event) => {
     if (!name?.trim() || !email?.trim() || !question?.trim()) {
       return {
         statusCode: 400,
-        headers,
         body: JSON.stringify({ error: 'Name, email, and message are required.' }),
       };
     }
@@ -34,7 +30,6 @@ exports.handler = async (event) => {
     if (!emailRegex.test(email)) {
       return {
         statusCode: 400,
-        headers,
         body: JSON.stringify({ error: 'Invalid email address.' }),
       };
     }
@@ -43,7 +38,6 @@ exports.handler = async (event) => {
     if (question.trim().length < 169) {
       return {
         statusCode: 400,
-        headers,
         body: JSON.stringify({ error: 'Message must be at least 169 characters.' }),
       };
     }
@@ -56,7 +50,6 @@ exports.handler = async (event) => {
     if (lastSubmission && now - lastSubmission < RATE_LIMIT_MS) {
       return {
         statusCode: 429,
-        headers,
         body: JSON.stringify({
           error: 'Too many requests. Please wait a minute before submitting again.',
         }),
@@ -93,7 +86,6 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers,
       body: JSON.stringify({
         success: true,
         message: 'Email sent successfully.',
@@ -104,7 +96,6 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 500,
-      headers,
       body: JSON.stringify({
         error: 'Failed to send email. Please try again later.',
       }),

@@ -31,7 +31,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 py-8">
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
             <div className="section-divider mb-6" />

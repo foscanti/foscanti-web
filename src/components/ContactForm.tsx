@@ -31,7 +31,12 @@ export default function ContactForm() {
         body: JSON.stringify(formData),
       });
 
-      const data = await response.json();
+      let data;
+      try {
+        data = await response.json();
+      } catch {
+        data = {};
+      }
 
       if (!response.ok) {
         setStatus("error");
@@ -42,9 +47,10 @@ export default function ContactForm() {
       setStatus("success");
       setFormData({ name: "", email: "", telephone: "", question: "" });
       setTimeout(() => setStatus("idle"), 5000);
-    } catch {
+    } catch (error) {
       setStatus("error");
       setErrorMessage("Network error. Please try again.");
+      console.error("Form submission error:", error);
     }
   };
 
@@ -123,8 +129,8 @@ export default function ContactForm() {
       </button>
 
       {status === "success" && (
-        <div className="rounded-lg bg-teal/10 p-4 text-sm text-teal">
-          ✓ Thanks for reaching out! I'll get back to you soon.
+        <div className="rounded-lg bg-teal/10 p-4 text-sm text-teal font-medium">
+          ✓ Email sent! Thanks for reaching out. I'll get back to you soon.
         </div>
       )}
 

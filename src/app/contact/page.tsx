@@ -32,28 +32,28 @@ export default function Contact() {
       </section>
 
       <section className="mx-auto max-w-5xl px-6 py-16">
-        <div className="section-divider mb-6" />
-        <div className="mb-8 rounded-2xl bg-rose/20 p-6">
-          <p className="text-sm leading-relaxed text-navy/80">
-            Email is slow — from a bygone era, lost in marketing malaise and the
-            ramifications of reminders. Message or call my cell; leave a voicemail
-            and I&rsquo;ll get back to you quickly.
-          </p>
-          <p className="mt-4 text-sm leading-relaxed text-navy/80">
-            Based in the Boston area and always happy to connect with fellow
-            technology, product, and delivery leaders.
-          </p>
-        </div>
-
         <div className="grid gap-10 lg:grid-cols-3">
           <div className="lg:col-span-2">
+            <div className="section-divider mb-6" />
             <h2 className="text-2xl font-bold text-navy">Send a Message</h2>
-            <div className="mt-6">
+            <div className="mt-4 rounded-lg bg-rose/20 p-4">
+              <p className="text-sm leading-relaxed text-navy/80">
+                Email is slow — from a bygone era, lost in marketing malaise and the
+                ramifications of reminders. Message or call my cell; leave a voicemail
+                and I&rsquo;ll get back to you quickly.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-navy/80">
+                Based in the Boston area and always happy to connect with fellow
+                technology, product, and delivery leaders.
+              </p>
+            </div>
+            <div className="mt-8">
               <ContactForm />
             </div>
           </div>
 
           <div>
+            <div className="section-divider mb-6" />
             <h2 className="text-2xl font-bold text-navy">Contact Details</h2>
             <dl className="mt-6 space-y-5">
               {details.map((item) => (

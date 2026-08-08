@@ -47,6 +47,7 @@ jobs:
           ZOHO_PASS: ${{ secrets.ZOHO_PASS }}
           ZOHO_HOST: ${{ secrets.ZOHO_HOST }}
           CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          NEXT_PUBLIC_LAMBDA_ENDPOINT: ${{ secrets.LAMBDA_ENDPOINT }}
         run: npm run build
 
       - name: Configure AWS credentials

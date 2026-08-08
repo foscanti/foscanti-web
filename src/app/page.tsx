@@ -40,7 +40,7 @@ export default function Home() {
               <div className="mt-6 sm:mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4 sm:items-center sm:justify-center lg:justify-start">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+                  className="inline-flex items-center justify-center rounded-full bg-cream px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-teal"
                 >
                   Get in Touch
                 </Link>
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="mt-8 sm:mt-12 flex justify-center lg:mt-16">
             <a
               href="#about"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream scroll-cue"
+              className="inline-flex flex-col items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 text-sm font-semibold text-navy transition-colors hover:bg-cream scroll-cue"
             >
               Learn more
               <svg

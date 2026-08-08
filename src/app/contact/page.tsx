@@ -10,11 +10,6 @@ const details = [
   { label: "Cell (US)", value: "🇺🇸 339-242-7199", href: "tel:+13392427199" },
   { label: "Mobile (UK)", value: "🇬🇧 07835 961 284", href: "tel:+447835961284" },
   { label: "Email", value: "michael@foscanti.com", href: "mailto:michael@foscanti.com" },
-  {
-    label: "LinkedIn",
-    value: "Connect on LinkedIn",
-    href: "https://www.linkedin.com/in/michael-moss-26a86a8/",
-  },
   { label: "Location", value: "Boston, MA, USA" },
   {
     label: "Languages",

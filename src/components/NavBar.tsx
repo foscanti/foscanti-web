@@ -66,10 +66,9 @@ export default function NavBar() {
               rel="noopener noreferrer"
               aria-label="Connect on LinkedIn"
               title="Connect on LinkedIn"
-              className="inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+              className="text-white transition-colors hover:text-teal"
             >
-              <LinkedInIcon className="h-4 w-4" />
-              Connect
+              <LinkedInIcon className="h-5 w-5" />
             </a>
           </li>
         </ul>
@@ -99,10 +98,11 @@ export default function NavBar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-2 inline-flex items-center gap-2 rounded-full bg-teal px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-cream"
+              aria-label="Connect on LinkedIn"
+              title="Connect on LinkedIn"
+              className="mt-2 inline-flex text-white transition-colors hover:text-teal"
             >
-              <LinkedInIcon className="h-4 w-4" />
-              Connect on LinkedIn
+              <LinkedInIcon className="h-5 w-5" />
             </a>
           </li>
         </ul>

@@ -44,18 +44,6 @@ export default function Home() {
                 >
                   Get in Touch
                 </Link>
-                <a
-                  href="https://www.linkedin.com/in/michael-moss-26a86a8/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-teal hover:text-navy"
-                  title="Connect on LinkedIn"
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-4 w-4">
-                    <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 9.67H5.67V18.3h2.67V9.67zM7 5.9a1.55 1.55 0 1 0 0 3.1 1.55 1.55 0 0 0 0-3.1zM18.34 18.3v-4.73c0-2.53-1.35-3.71-3.15-3.71a2.72 2.72 0 0 0-2.46 1.35h-.04V9.67H10.1v8.63h2.67v-4.27c0-1.12.21-2.2 1.6-2.2s1.4 1.28 1.4 2.27v4.2h2.57z" />
-                  </svg>
-                  Connect
-                </a>
               </div>
             </div>
 
@@ -185,14 +173,6 @@ export default function Home() {
           >
             Get in Touch
           </Link>
-          <a
-            href="https://www.linkedin.com/in/michael-moss-26a86a8/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block rounded-full border border-navy/30 px-6 py-3 text-sm font-semibold text-navy transition-colors hover:border-teal hover:text-teal"
-          >
-            Connect on LinkedIn
-          </a>
         </div>
       </section>
     </>

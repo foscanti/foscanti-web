@@ -27,9 +27,21 @@ export default function NavBar() {
   return (
     <header className="sticky top-0 z-50 bg-navy text-white shadow-md">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
-          Michael Moss
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/" className="text-lg font-semibold tracking-tight">
+            Michael Moss
+          </Link>
+          <a
+            href={LINKEDIN_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Connect on LinkedIn"
+            title="Connect on LinkedIn"
+            className="text-white transition-colors hover:text-teal"
+          >
+            <LinkedInIcon className="h-5 w-5" />
+          </a>
+        </div>
 
         <button
           type="button"
@@ -59,18 +71,6 @@ export default function NavBar() {
               </li>
             );
           })}
-          <li>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Connect on LinkedIn"
-              title="Connect on LinkedIn"
-              className="text-white transition-colors hover:text-teal"
-            >
-              <LinkedInIcon className="h-5 w-5" />
-            </a>
-          </li>
         </ul>
       </nav>
 
@@ -92,19 +92,6 @@ export default function NavBar() {
               </li>
             );
           })}
-          <li>
-            <a
-              href={LINKEDIN_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              aria-label="Connect on LinkedIn"
-              title="Connect on LinkedIn"
-              className="mt-2 inline-flex text-white transition-colors hover:text-teal"
-            >
-              <LinkedInIcon className="h-5 w-5" />
-            </a>
-          </li>
         </ul>
       )}
     </header>
